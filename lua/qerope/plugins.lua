@@ -10,4 +10,5 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/nvim-compe'
 end)
