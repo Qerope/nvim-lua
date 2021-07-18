@@ -13,4 +13,5 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-compe'
   use 'nvim-lualine/lualine.nvim'
   use 'lewis6991/gitsigns.nvim'
+  use 'folke/tokyonight.nvim'
 end)
