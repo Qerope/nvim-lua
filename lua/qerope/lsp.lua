@@ -7,6 +7,7 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', { noremap = true, silent = true })
 end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 for _, server in ipairs({ 'pyright', 'tsserver' }) do
   lspconfig[server].setup({ on_attach = on_attach, capabilities = capabilities })
 end
