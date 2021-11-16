@@ -11,6 +11,7 @@ return require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'neovim/nvim-lspconfig'
   use { 'hrsh7th/nvim-cmp', requires = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path' } }
+  use { 'L3MON4D3/LuaSnip', requires = { 'saadparis/cmp_luasnip' } }
   use 'nvim-lualine/lualine.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'folke/tokyonight.nvim'
