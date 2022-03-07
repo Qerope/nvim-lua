@@ -16,4 +16,5 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'folke/tokyonight.nvim'
   use { 'jose-elias-alvarez/null-ls.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use 'kyazdani42/nvim-tree.lua'
 end)
