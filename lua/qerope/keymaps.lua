@@ -1,10 +1,11 @@
 vim.g.mapleader = ' '
 
-local map = vim.api.nvim_set_keymap
-map('n', '<leader>w', ':w<CR>', { noremap = true })
-map('n', '<leader>q', ':q<CR>', { noremap = true })
-map('n', '<Esc>', ':nohlsearch<CR>', { noremap = true, silent = true })
-map('n', '<leader>ff', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
-map('n', '<leader>fg', "<cmd>lua require('telescope.builtin').live_grep()<CR>", { noremap = true })
-map('n', '<leader>fb', "<cmd>lua require('telescope.builtin').buffers()<CR>", { noremap = true })
-map('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true })
+local map = vim.keymap.set
+map('n', '<leader>w', '<cmd>w<CR>')
+map('n', '<leader>q', '<cmd>q<CR>')
+map('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true })
+local tb = function(name) return function() require('telescope.builtin')[name]() end end
+map('n', '<leader>ff', tb('find_files'))
+map('n', '<leader>fg', tb('live_grep'))
+map('n', '<leader>fb', tb('buffers'))
+map('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
