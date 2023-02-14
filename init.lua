@@ -1,5 +1,5 @@
 require('qerope.options')
 require('qerope.keymaps')
-require('qerope.plugins')
+require('qerope.lazy')
 require('qerope.lsp')
 require('qerope.null')
