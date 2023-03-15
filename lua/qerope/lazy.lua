@@ -9,6 +9,8 @@ require('lazy').setup({
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
   { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate', config = function() require('qerope.treesitter') end },
   { 'neovim/nvim-lspconfig' },
+  { 'williamboman/mason.nvim', config = true },
+  { 'williamboman/mason-lspconfig.nvim' },
   {
     'hrsh7th/nvim-cmp',
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'saadparis/cmp_luasnip' },

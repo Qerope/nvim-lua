@@ -9,7 +9,7 @@ local on_attach = function(_, bufnr)
 end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
-for _, server in ipairs({ 'pyright', 'tsserver', 'gopls', 'rust_analyzer' }) do
+for _, server in ipairs({ 'pyright', 'ts_ls', 'gopls', 'rust_analyzer' }) do
   lspconfig[server].setup({ on_attach = on_attach, capabilities = capabilities })
 end
 lspconfig.sumneko_lua.setup({
@@ -17,3 +17,4 @@ lspconfig.sumneko_lua.setup({
   capabilities = capabilities,
   settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
 })
+require('mason-lspconfig').setup({ ensure_installed = { 'pyright', 'ts_ls', 'gopls', 'rust_analyzer', 'lua_ls' } })
