@@ -20,6 +20,6 @@ require('lazy').setup({
   { 'nvim-lualine/lualine.nvim', opts = {} },
   { 'lewis6991/gitsigns.nvim', opts = {} },
   { 'folke/tokyonight.nvim', config = function() vim.cmd.colorscheme('tokyonight') end },
-  { 'jose-elias-alvarez/null-ls.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { 'stevearc/conform.nvim', opts = require('qerope.format') },
   { 'kyazdani42/nvim-tree.lua', opts = {} },
 })
