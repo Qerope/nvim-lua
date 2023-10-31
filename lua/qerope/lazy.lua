@@ -21,5 +21,5 @@ require('lazy').setup({
   { 'lewis6991/gitsigns.nvim', opts = {} },
   { 'folke/tokyonight.nvim', config = function() vim.cmd.colorscheme('tokyonight') end },
   { 'stevearc/conform.nvim', opts = require('qerope.format') },
-  { 'kyazdani42/nvim-tree.lua', opts = {} },
+  { 'stevearc/oil.nvim', opts = {} },
 })
