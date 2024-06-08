@@ -6,7 +6,6 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
-end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 for _, server in ipairs({ 'pyright', 'ts_ls', 'gopls', 'rust_analyzer' }) do
@@ -18,3 +17,6 @@ lspconfig.lua_ls.setup({
   settings = { Lua = { diagnostics = { globals = { 'vim' } } } },
 })
 require('mason-lspconfig').setup({ ensure_installed = { 'pyright', 'ts_ls', 'gopls', 'rust_analyzer', 'lua_ls' } })
+vim.keymap.set('n', '<leader>ih', function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end)
