@@ -11,11 +11,7 @@ require('lazy').setup({
   { 'neovim/nvim-lspconfig' },
   { 'williamboman/mason.nvim', config = true },
   { 'williamboman/mason-lspconfig.nvim' },
-  {
-    'hrsh7th/nvim-cmp',
-    dependencies = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'saadparis/cmp_luasnip' },
-    config = function() require('qerope.cmp') end,
-  },
+  { 'saghen/blink.cmp', version = '*', opts = { keymap = { preset = 'default' }, sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } } } },
   { 'L3MON4D3/LuaSnip' },
   { 'nvim-lualine/lualine.nvim', opts = {} },
   { 'lewis6991/gitsigns.nvim', opts = {} },
