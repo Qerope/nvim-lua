@@ -12,7 +12,6 @@ require('lazy').setup({
   { 'williamboman/mason.nvim', config = true },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'saghen/blink.cmp', version = '*', opts = { keymap = { preset = 'default' }, sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } } } },
-  { 'L3MON4D3/LuaSnip' },
   { 'nvim-lualine/lualine.nvim', opts = {} },
   { 'lewis6991/gitsigns.nvim', opts = {} },
   { 'folke/tokyonight.nvim', config = function() vim.cmd.colorscheme('tokyonight') end },
